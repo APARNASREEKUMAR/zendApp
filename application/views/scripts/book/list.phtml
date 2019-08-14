@@ -1,0 +1,11 @@
+<br /><br />
+<div id="view-content">
+	<p>View script for controller <b>Book</b> and script/action name <b>list</b></p>
+	<?php
+	$var = $this->books;
+
+	foreach ($this->books as $value) {
+		echo $value->bookscol."<br>";
+	}
+	?>
+</div>
