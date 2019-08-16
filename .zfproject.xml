@@ -17,6 +17,7 @@
           <actionMethod actionName="edit"/>
           <actionMethod actionName="delete"/>
           <actionMethod actionName="list"/>
+          <actionMethod actionName="update"/>
         </controllerFile>
         <controllerFile controllerName="Authentication">
           <actionMethod actionName="index"/>
@@ -24,7 +25,10 @@
           <actionMethod actionName="logout"/>
         </controllerFile>
       </controllersDirectory>
-      <formsDirectory enabled="false"/>
+      <formsDirectory enabled="false">
+        <formFile formName="AddBookForm.php"/>
+        <formFile formName="EditBookForm"/>
+      </formsDirectory>
       <layoutsDirectory enabled="false"/>
       <modelsDirectory/>
       <modulesDirectory enabled="false"/>
@@ -60,6 +64,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Authentication">
             <viewScriptFile forActionName="logout"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Book">
+            <viewScriptFile forActionName="update"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>

@@ -23,7 +23,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $layout = $this->getResource('layout');
         $view = $layout->getView();
         
-        $view->doctype('HTML4_STRICT');  
+        $view->doctype('HTML5');  
         $view->headMeta()->appendHttpEquiv('Content-type','text/html;charset=utf-8')
                          ->appendName('description','Using View Helpers in Zend View');  
         $view->headTitle()->setSeparator(' - '); 

@@ -1,21 +1,26 @@
 <?php
 class Form_LoginForm extends Zend_Form
 {
-    public function __construct($option = null)
+    public function init()
     {
-        parent::__construct($option);
         $this->setName('login');
 
-        $name = new Zend_Form_Element_Text('name');
-        $name->setLabel('User Name:')
-             ->setRequired();
+        $this->addElement('text', 'name', array(
+                'label'      => 'User Name:',
+                'required'   => true,
+                'class'   => 'form-control',
+                ));
+        $this->addElement('password', 'password', array(
+                'label'      => 'Password:',
+                'required'   => true,
+                'class'   => 'form-control',
 
-        $password = new Zend_Form_Element_Password('password');
-        $password->setLabel('Password:')
-                 ->setRequired(true);     
-
-        $login =new  Zend_Form_Element_Submit('login');
-        $login->setLabel('Login');
+            ));    
+        $this->addElement('submit', 'login', array(
+                'ignore'   => true,
+                'label'    => 'Login',
+                'class'    =>'btn btn-primary' 
+            )); 
 
         $this->addElements(array($name,$password,$login));    
         $this->setMethod('post');
